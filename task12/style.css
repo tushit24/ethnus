@@ -1,0 +1,7 @@
+.main-list {
+  font-size: 18px;
+  padding-left: 20px;
+}
+.main-list ul {
+  list-style-type: circle;
+}

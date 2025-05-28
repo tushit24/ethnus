@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('360_F_1082271203_7ePzzlgR28ePqqwIKEiNdW7aEXARAcel.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.cv-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+h2, h3 {
+    color: white;
+}
+
+ul {
+    padding-left: 20px;
+}

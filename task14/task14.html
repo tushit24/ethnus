@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Company Table</title>
+  <style>
+    .table {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .table-row {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .table-row.header {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+    }
+
+    .table-cell {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .table-row:nth-child(even):not(.header) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="table">
+    <div class="table-row header">
+      <div class="table-cell">Company</div>
+      <div class="table-cell">Contact</div>
+      <div class="table-cell">Country</div>
+    </div>
+    <div class="table-row"><div class="table-cell">Alfreds Futterkiste</div><div class="table-cell">Maria Anders</div><div class="table-cell">Germany</div></div>
+    <div class="table-row"><div class="table-cell">Berglunds snabbköp</div><div class="table-cell">Christina Berglund</div><div class="table-cell">Sweden</div></div>
+    <div class="table-row"><div class="table-cell">Centro comercial Moctezuma</div><div class="table-cell">Francisco Chang</div><div class="table-cell">Mexico</div></div>
+    <div class="table-row"><div class="table-cell">Ernst Handel</div><div class="table-cell">Roland Mendel</div><div class="table-cell">Austria</div></div>
+    <div class="table-row"><div class="table-cell">Island Trading</div><div class="table-cell">Helen Bennett</div><div class="table-cell">UK</div></div>
+    <div class="table-row"><div class="table-cell">Königlich Essen</div><div class="table-cell">Philip Cramer</div><div class="table-cell">Germany</div></div>
+    <div class="table-row"><div class="table-cell">Laughing Bacchus Winecellars</div><div class="table-cell">Yoshi Tannamuri</div><div class="table-cell">Canada</div></div>
+    <div class="table-row"><div class="table-cell">Magazzini Alimentari Riuniti</div><div class="table-cell">Giovanni Rovelli</div><div class="table-cell">Italy</div></div>
+  </div>
+</body>
+</html>

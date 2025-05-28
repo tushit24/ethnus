@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+
+
+
+.starred-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.starred-list li {
+  margin: 10px 0;
+  font-size: 25px;
+ 
+  padding-left: 25px;
+}
+
+.starred-list li::before {
+  content: "★";
+  color: red;
+  font-size: 25px;
+ 
+  left: 0;
+}

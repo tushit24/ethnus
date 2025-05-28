@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2 - JS Chessboard</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+    }
+
+    .chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 50px);
+      grid-template-rows: repeat(8, 50px);
+      border: 5px solid black;
+    }
+
+    .chessboard div {
+      width: 50px;
+      height: 50px;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chessboard" id="board"></div>
+
+  <script>
+    const board = document.getElementById("board");
+
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 8; col++) {
+        const square = document.createElement("div");
+        // Alternating color logic
+        if ((row + col) % 2 === 0) {
+          square.className = "black";
+        } else {
+          square.className = "pink";
+        }
+        board.appendChild(square);
+      }
+    }
+  </script>
+
+</body>
+</html>
