@@ -65,7 +65,7 @@ h2 {
   height: 180px;
   border-radius: 10px;
   transition: transform 0.3s;
-  cursor: pointer;
+  
 }
 
 .album-row img:hover {
