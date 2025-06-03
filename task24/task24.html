@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marks to Grade</title>
+</head>
+<body>
+  <script>
+    var marks = prompt("Enter your marks (0–100):");
+
+    // Convert to number and ensure it's a valid number
+    marks = parseFloat(marks);
+    marks = marks * 1;
+
+    if (marks >= 90 && marks <= 100) {
+      document.write("Grade: A");
+    } else if (marks >= 80 && marks < 90) {
+      document.write("Grade: B");
+    } else if (marks >= 70 && marks < 80) {
+      document.write("Grade: C");
+    } else if (marks >= 60 && marks < 70) {
+      document.write("Grade: D");
+    } else if (marks >= 0 && marks < 60) {
+      document.write("Grade: F (Fail)");
+    } else {
+      document.write("Invalid input. Please enter marks between 0 and 100.");
+    }
+  </script>
+</body>
+</html>
