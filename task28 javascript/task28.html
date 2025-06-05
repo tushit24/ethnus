@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime Number Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    input, textarea {
+      padding: 5px;
+      width: 200px;
+    }
+    button {
+      padding: 6px 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Prime Number Generator</h2>
+
+  <table>
+    <tr>
+      <td>Start</td>
+      <td><input type="number" id="start" placeholder="Enter start number"></td>
+    </tr>
+    <tr>
+      <td>End</td>
+      <td><input type="number" id="end" placeholder="Enter end number"></td>
+    </tr>
+    <tr>
+      <td>Prime Number</td>
+      <td><textarea id="result" rows="5" readonly></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button onclick="generatePrimes()">Generate</button></td>
+    </tr>
+  </table>
+
+  <script>
+    function isPrime(n) {
+      if (n < 2) return false;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    function generatePrimes() {
+      const start = Number(document.getElementById("start").value);
+      const end = Number(document.getElementById("end").value);
+      const resultBox = document.getElementById("result");
+      let primes = [];
+
+      for (let i = start; i <= end; i++) {
+        if (isPrime(i)) {
+          primes.push(i);
+        }
+      }
+
+      resultBox.value = primes.length > 0 ? primes.join(", ") : "No primes found in this range.";
+    }
+  </script>
+
+</body>
+</html>
