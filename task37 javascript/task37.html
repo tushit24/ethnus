@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <title>LocalStorage Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Save & Load Form (LocalStorage)</h1>
+
+  <input type="text" id="name" placeholder="Enter name" />
+  <br>
+  <input type="number" id="age" placeholder="Enter age" />
+  <br>
+
+  <button onclick="saveData()">Save</button>
+  <button onclick="loadData()">Load</button>
+
+  <script>
+    function saveData() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userAge", age);
+
+      alert("Data saved!");
+    }
+
+    function loadData() {
+      const name = localStorage.getItem("userName");
+      const age = localStorage.getItem("userAge");
+
+      if (name && age) {
+        document.getElementById("name").value = name;
+        document.getElementById("age").value = age;
+      } else {
+        alert("No data found in localStorage.");
+      }
+    }
+  </script>
+
+</body>
+</html>
