@@ -1,30 +1,76 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FlickFinder</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <div class="logo">Flick<span>Finder</span></div>
-    <ul class="nav-links">
-      <li><a href="#">TV Show</a></li>
-      <li><a href="#">Movie</a></li>
-      <li><a href="#">Upcoming</a></li>
-      <li><button class="fav-btn">Favorite ♡</button></li>
-    </ul>
-  </nav>
+  <!-- Navbar -->
+  <header>
+    <h1 class="logo">Flick<span>Finder</span></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">TV Show</a>
+      <a href="#">Movies</a>
+      <a href="#">Upcoming</a>
+    </nav>
+    <button class="favorite-btn">❤️ Favorite</button>
+  </header>
 
-  <div class="carousel">
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <div class="slide-text">
-      <h1>Bringing the Big Screen to Your Screen</h1>
-      <p>Discover, critique, and celebrate movies with honest reviews and fresh takes on every film</p>
-      <button class="discover-btn">Discover More..</button>
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="slides">
+      <img src="thumb-1920-918482.jpg" class="slide" />
+      <img src="sci-fi-background-q91yv67o7rlsdsu8.jpg" class="slide" />
+      <img src="images (1).jpeg" class="slide" />
     </div>
-    <img id="carouselImage" src="" alt="Movie Banner" />
-    <button class="next" onclick="nextSlide()">&#10095;</button>
-  </div>
+  </section>
+
+  <!-- Movie Filters & Search -->
+  <section class="controls">
+    <button>Marvel Movie</button>
+    <button>Funny Movie</button>
+    <button>Animation Movie</button>
+    <button>Web Series</button>
+    <input type="text" id="searchInput" placeholder="Search movie...">
+  </section>
+
+  <!-- Movie List -->
+  <section class="movie-list" id="movieList">
+    <!-- Movie cards populated by JS -->
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">1. What is this website about?</button>
+        <div class="accordion-content">This site provides honest reviews and recommendations.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">2. How are movies rated?</button>
+        <div class="accordion-content">They’re rated by critics and users.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>FlickFinder</h4>
+        <p>Discover Movies & Shows</p>
+      </div>
+      <div>
+        <input type="email" placeholder="Subscribe to newsletter" />
+        <button>Send</button>
+      </div>
+    </div>
+    <p class="copyright">© 2025 FlickFinder. Built by <a href='#'>Tushit Tiwari</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
